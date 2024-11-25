@@ -1,0 +1,72 @@
+/* Estilos básicos para la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fondo oscuro para resaltar el efecto de neón */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden; /* Para evitar scrolls innecesarios */
+}
+
+/* Contenedor principal del cursor neón */
+#app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #00ff99; /* Color neón */
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+    animation: neonBlink 1.5s ease-in-out infinite alternate;
+}
+
+/* Texto del párrafo */
+p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 0.8;
+    max-width: 600px;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+}
+
+/* Efecto de parpadeo en el texto */
+@keyframes neonBlink {
+    from {
+        text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+    }
+    to {
+        text-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99;
+    }
+}
+
+/* Efecto de neón en el contenedor de la página */
+#app::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,255,153,0.2) 0%, rgba(0,0,0,1) 100%);
+    z-index: -1; /* Para colocar la animación detrás del contenido */
+}
+
+/* Haciendo que el cursor sea invisible, para que solo se vea el neón */
+body {
+    cursor: none;
+}

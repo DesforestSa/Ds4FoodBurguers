@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Fresh Food
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="style2.css">
+   
+    
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    
+</head><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Fresh Food
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css">
+   
+    
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    
+</head>
+
+
+<body></body>
+    <!-- MOBILE NAV -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item active">
+            <a href="#home">
+                <i class="bx bxs-home"></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#about">
+                <i class='bx bxs-wink-smile'></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#food-menu-section">
+                <i class='bx bxs-food-menu'></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#testimonial">
+                <i class='bx bxs-comment-detail'></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#map">
+                <i class='bx bxs-map'></i>
+            </a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#historia">
+                <i class='bx bxs-file'></i>
+            </a>
+        </div>
+    </div>
+    <!-- END MOBILE NAV -->
+    <!-- BACK TO TOP BTN -->
+    <a href="#home" class="back-to-top">
+        <i class="bx bxs-to-top"></i>
+    </a>
+    <!-- END BACK TO TOP BTN -->
+    <!-- TOP NAVIGATION -->
+    <!--------------------------------------------------------------------->
+    <img src="" alt="" width="150s" height=""></img>
+    <nav class="navbar navbar-expand-sm bg-custom">
+      <div class="container-fluid  ">
+          <img class="navbar-brand" href="#">
+        
+              <img src="img/SP.png" alt="" width="150s" height=""></img>
+          </a>
+    
+          <button class="navbar-toggler"
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><h5>Inicio</h5></a></li>
+                <li class="nav-item"><a class="nav-link" href="catalogo.html"><h5>Productos</h5></a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html"><h5>Contactos</h5></a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html"><h5>Nosotros</h5></a></li>
+                <li class="nav-item"><a class="nav-link" href="ofertas.html"><h5>Ofertas</h5></a></li>
+                <button class="btn btn-outline-success mt-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                    <i class="bi bi-cart4"></i>Carrito de compra
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Carrito de compras</h5>
+        <!-- El botón de cierre -->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul id="cartItems" class="list-group">
+            <!-- Aquí se agregarán los productos dinámicamente -->
+        </ul>
+        <hr>
+        <h6>Total: <span id="cartTotal">S/ 0.00</span></h6>
+
+        <!-- Botón para proceder al pago -->
+        <button style="background-color: #000000;" type="button" class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#paymentModal">
+            <i class='bx bx-cart-alt'></i> Proceder al pago
+        </button>
+
+        <!-- Nuevo botón para enviar el pedido por WhatsApp -->
+        <button id="sendToWhatsapp" style="background-color: #25D366;" type="button" class="btn btn-success w-100 mt-2">
+            <i class='bx bxl-whatsapp'></i> Enviar pedido por WhatsApp
+        </button>
+
+    </div>
+</div>
+  </div>
+<!-- FOOD MENU SECTION -->
+<section class="align-items-center bg-img bg-img-fixed" id="food-menu-section"
+style="background-image: url(assets/katherine-chase-4MMK78S7eyk-unsplash.jpg);">
+<div class="container">
+<div class="food-menu">
+    <h1>PRODUCTOS<span class="primary-color"> DE FOOD</span> BURGER</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+
+    <div class="food-category">
+        <div class="zoom play-on-scroll" >
+            <button class="active" data-food-type="hamburguesa">
+                Hamburguesa
+            </button>
+        </div>
+        <div class="zoom play-on-scroll delay-2" >
+            <button data-food-type="papita">
+                Pepitos
+            </button>
+        </div>
+        <div class="zoom play-on-scroll delay-4" >
+            <button data-food-type="gaseosa">
+                Salchipapas
+            </button>
+        </div>
+        <div class="zoom play-on-scroll delay-6" >
+            <button data-food-type="perritos">
+                Broaster
+            </button>
+        </div>
+        <div class="zoom play-on-scroll delay-8" >
+            <button data-food-type="broastar">
+                Perritos Calientes
+            </button>
+        </div>
+        <div class="zoom play-on-scroll delay-10" >
+            <button data-food-type="pollo">
+                Bebidas
+            </button>
+        </div>
+    </div>
+
+
+    <div class="food-item-wrap">
+
+         <!-- Productos Hamburguesa ---------------------------------------------->
+
+         <div class="food-item hamburguesa-item">
+            <div class="item-wrap">
+                <div class="item-img">
+                    <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title">FOOD CLASICO</h5>
+                        <p class="card-text">S/ 10.00</p> <!-------------------------------------------------------------------------->
+                    </div>
+                    <!-- Botón Comprar Ahora -->
+                    <a href="#" style="background-color: #000000;"  onclick="cargarProducto(1)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                    
+                    <!-- Botón Agregar al Carrito -->
+                   
+                    
+                </div>
+            </div>
+        </div>
+            
+        
+        <div class="food-item hamburguesa-item">
+            <div class="item-wrap">
+                <div class="item-img">
+                    <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title">FOOD ESPECIAL</h5>
+                        <p class="card-text">S/ 14.00</p>
+                    </div>
+                    <!-- Botón Comprar Ahora -->
+                    <a href="#" style="background-color: #000000;"  onclick="cargarProducto(2)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                    
+                    <!-- Botón Agregar al Carrito -->
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------------------->
+
+        <div class="food-item hamburguesa-item">
+            <div class="item-wrap">
+                <div class="item-img">
+                    <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title">ROYAL</h5>
+                        <p class="card-text">S/ 14.00</p>
+                    </div>
+                    <!-- Botón Comprar Ahora -->
+                    <a href="#" style="background-color: #000000;"  onclick="cargarProducto(3)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                    
+                    <!-- Botón Agregar al Carrito -->
+                   
+                    
+                </div>
+            </div>
+        </div>
+            
+
+            <!-- Productos Papitas -------------------------------------------------------->
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">FOOD ESPECIAL CHULETA AHUMADA</h5>
+                            <p class="card-text">S/ 14.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(4)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+
+                    </div>
+                </div>
+            </div>
+            <!-- Productos Gaseosa -->
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">FOOD DOBLE CARNE</h5>
+                            <p class="card-text">S/ 14.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(5)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">FOOD MIXTA</h5>
+                            <p class="card-text">S/ 17.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(6)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">FOOD TRIPLE</h5>
+                            <p class="card-text">S/ 22.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(7)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">FOOD EXPLOSIVA</h5>
+                            <p class="card-text">S/ 28.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(8)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">A LO POBRE</h5>
+                            <p class="card-text">S/ 12.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(9)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item hamburguesa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">POLLO CRISPY</h5>
+                            <p class="card-text">S/ 15.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(10)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos Pollo -->
+            <div class="food-item papita-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Pepitos/PEPITOS\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepito Mixto</h5>
+                            <p class="card-text">S/ 28.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(11)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item papita-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Pepitos/PEPITOS\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepito Especial</h5>
+                            <p class="card-text">S/ 36.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(12)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item papita-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Pepitos/PEPITOS\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepito Primavera</h5>
+                            <p class="card-text">S/ 36.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(13)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item gaseosa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Salchipapas/salchipapa\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Salchipapa Clasica</h5>
+                            <p class="card-text">S/ 11.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(14)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item gaseosa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Salchipapas/salchipapa\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Salchipollo</h5>
+                            <p class="card-text">S/ 13.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(15)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item gaseosa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Salchipapas/salchipapa\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Salchicarne</h5>
+                            <p class="card-text">S/ 13.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(16)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item gaseosa-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Salchipapas/salchipapa\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Salchipapa con Tocino</h5>
+                            <p class="card-text">S/ 15.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(17)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item perritos-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Broaster/BroasterPecho.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">PECHO</h5>
+                            <p class="card-text">S/ 12.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(18)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-item perritos-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('assets/z7.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">ALITA</h5>
+                            <p class="card-text">S/ 10.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(19)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item broastar-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/PerrosCaleintes/perritos\ calientes\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Perro Caliente Clasico</h5>
+                            <p class="card-text">S/ 5.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(20)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item broastar-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/PerrosCaleintes/perritos\ calientes\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepiperro de Carne</h5>
+                            <p class="card-text">S/ 9.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(21)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item broastar-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/PerrosCaleintes/perritos\ calientes\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepiperro de Pollo</h5>
+                            <p class="card-text">S/ 10.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(22)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item broastar-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/PerrosCaleintes/perritos\ calientes\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepiperro de Chorizo</h5>
+                            <p class="card-text">S/ 8.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(23)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item broastar-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/PerrosCaleintes/perritos\ calientes\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepiperro Mixto</h5>
+                            <p class="card-text">S/ 13.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(24)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/CocaCola.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Coca Cola</h5>
+                            <p class="card-text">S/ 4.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Coca Cola', 4.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/CocaColaZero.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Coca Cola Zero</h5>
+                            <p class="card-text">S/ 4.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Coca Cola Zero', 4.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/InkaCola.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Inka Cola</h5>
+                            <p class="card-text">S/ 4.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Inka Cola', 4.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/Pepsi.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepsi</h5>
+                            <p class="card-text">S/ 5.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Pepsi', 5.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/ConcordiaPina.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Concordia Piña</h5>
+                            <p class="card-text">S/ 3.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Concordia Piña', 3.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/ConcordiaFresa.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Concordia Fresa</h5>
+                            <p class="card-text">S/ 3.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Concordia Fresa', 3.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/FantaNaranja.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Fanta Naranja</h5>
+                            <p class="card-text">S/ 4.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Fanta Naranja', 4.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/Guarana.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Guarana</h5>
+                            <p class="card-text">S/ 3.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Guarana', 3.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/ChichaLitro.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Chicha Morada 1 L</h5>
+                            <p class="card-text">S/ 6.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Chicha Morada 1 L', 6.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-item pollo-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/Bebidas/ChichaVenezolana.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Chicha de Arroz</h5>
+                            <p class="card-text">S/ 8.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  
+                        onclick="addToCart('Chicha de Arroz', 8.00, 25)" 
+                        class="btn btn-primary btn-sm mt-2">
+                        Agregar al carrito
+                        </a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="food-item broastar-item">
+                <div class="item-wrap">
+                    <div class="item-img">
+                        <div class="img-holder bg-img" style="background-image: url('img/PerrosCaleintes/perritos\ calientes\ 1.png');"></div>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Pepiperro Especial</h5>
+                            <p class="card-text">S/ 10.00</p>
+                        </div>
+                        <!-- Botón Comprar Ahora -->
+                        <a href="#" style="background-color: #000000;"  onclick="cargarProducto(35)" class="btn btn-primary btn-sm mt-2">Comprar Ahora</a>
+                        
+                        <!-- Botón Agregar al Carrito -->
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+<!-- Modal Product -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Product Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <!-- Imagen Única del Producto -->
+                <img src="assets/z5.png" class="img-fluid mb-3" alt="Product Image" id="modalProductImage">
+
+                <!-- Descripción del Producto y Precio -->
+                <h5 class="text-start fw-lighter mt-4" id="modalProductDescription">Descripción del producto</h5>
+                <h5 class="text-success text-start fw-bold" id="modalProductPrice">S/ 0.00</h5>
+            </div>
+
+            <!-- Checkbox de Cremas -->
+            <div class="mt-3 text-start" id="creamsOptions">
+                <p><strong>Elige una opción:</strong></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Mayonesa" id="option1" value="Mayonesa">
+                    <label class="form-check-label" for="option1">Mayonesa</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Ketchup" id="option2" value="Ketchup">
+                    <label class="form-check-label" for="option2">Ketchup</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Uchucuta" id="option3" value="Uchucuta">
+                    <label class="form-check-label" for="option3">Uchucuta</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Mostaza" id="option4" value="Mostaza">
+                    <label class="form-check-label" for="option4">Mostaza</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Aji" id="option5" value="Ají">
+                    <label class="form-check-label" for="option5">Ají</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Ocopa" id="option6" value="Ocopa">
+                    <label class="form-check-label" for="option6">Ocopa</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Barbiquiu" id="option7" value="Barbiquiu">
+                    <label class="form-check-label" for="option7">Barbiquiu</label>
+                </div>
+            </div>
+
+            <!-- Selección de gaseosas (inicialmente oculto) -->
+            <div class="mt-3 text-start d-none" id="drinkOptions">
+                <p><strong>Selecciona la cantidad de gaseosas:</strong></p>
+                <input type="number" class="form-control" id="drinkQuantity" value="1" min="1">
+            </div>
+
+            <!-- Botón de Añadir al Carrito -->
+            <div class="modal-footer">
+                <button id="addToCartButton" style="background-color: #000000;" class="btn btn-primary w-100">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Modal de Pasarela de Pagos -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Pasarela de Pagos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="mb-4 text-center">Selecciona tu método de pago</h6>
+                
+                <!-- Opciones de Pago -->
+                <div class="row text-center mb-3">
+                    <!-- Yape -->
+                    <div class="col-md-6">
+                        <div class="payment-option" data-payment="yape">
+                            <i class="bx bxs-mobile payment-icon"></i>
+                            <h6>Yape</h6>
+                        </div>
+                    </div>
+                    <!-- Pago en Efectivo -->
+                    <div class="col-md-6">
+                        <div class="payment-option" data-payment="cash">
+                            <i class="bx bxs-wallet payment-icon"></i>
+                            <h6>Efectivo</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Yape -->
+                <div id="yapeSection" class="payment-section" style="display:none;">
+                    <h6>Paga con Yape</h6>
+                    <p>Escanea el código QR con tu aplicación de Yape para completar el pago.</p>
+                
+                    <!-- QR Code Container -->
+                    <div class="qr-code-container text-center">
+                        <img src="assets/yape-qr.jpg" alt="Código QR Yape" class="img-fluid qr-image">
+                    </div>
+                
+                    <!-- Formulario de Información Personal -->
+                    <div class="mt-4">
+                        <h6>Información Personal</h6>
+                        <form id="yapeForm">
+                            <div class="form-group mb-2">
+                                <label for="firstName">Nombre</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Ingresa tu nombre" required>
+                            </div>
+                
+                            <div class="form-group mb-2">
+                                <label for="lastName">Apellido</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Ingresa tu apellido" required>
+                            </div>
+                
+                            <div class="form-group mb-2">
+                                <label for="dni">DNI</label>
+                                <input type="text" class="form-control" id="dni" placeholder="Ingresa tu DNI" required>
+                            </div>
+                
+                            <div class="form-group mb-2">
+                                <label for="address">Dirección</label>
+                                <input type="text" class="form-control" id="address" placeholder="Ingresa tu dirección" required>
+                            </div>
+                
+                            <div class="form-group mb-2">
+                                <label for="phoneNumber">Número Telefónico</label>
+                                <input type="text" class="form-control" id="phoneNumber" placeholder="Ingresa tu número de teléfono" required>
+                            </div>
+                        </form>
+                    </div>
+                
+                    <!-- Confirmation Message -->
+                    <div class="text-center mt-3">
+                        <small><i class="bx bxs-check-circle text-success"></i> Confirma tu pago y recibirás un mensaje de confirmación.</small>
+                    </div>
+                </div>
+                
+
+                <!-- Sección Pago en Efectivo -->
+                <div id="cashSection" class="payment-section" style="display:none;">
+                    <h6>Paga en Efectivo</h6>
+                    <p>Realiza tu pago cuando recibas tu pedido. Asegúrate de tener el monto exacto.</p>
+                    <ul>
+                        <li>Entrega el efectivo al repartidor.</li>
+                        <li>El repartidor te proporcionará un comprobante.</li>
+                    </ul>
+                    <div class="text-center mt-3">
+                        <small><i class="bx bxs-info-circle text-warning"></i> No es necesario hacer ningún pago por adelantado.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success" id="proceedPayment" style="display:none;">Proceder al Pago</button>
+                <div class="modal-footer">
+               
+               
+
+                
+                <!--    <div class="d-grid gap-2">
+                        <a href="https://wa.link/r8xgde" target="_blank">
+                            <button style="background-color: #27a858;" class="btn btn-primary" type="button">WhatsApp</button>
+                        </a>
+                    </div>
+                    <div class="d-grid gap-2 mt-2">
+                        <a href="https://m.me/enoch.weed" target="_blank">
+                            <button style="background-color: #273fa8;" class="btn btn-primary" type="button">Facebook</button>
+                        </a>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="https://www.instagram.com/spaceboy__shop?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                            <button style="background-color: #a965c4;" class="btn btn-primary" type="button">Instagram</button>
+                        </a>
+                    </div>-->
+                    
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div></div></div>
+
+
+
+
+<!-- FOOTER SECTION -->
+<section class="footer bg-img" style="background-image: url(assets/nordwood-themes-pYWrdKO5ksI-unsplash.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-xs-12">
+                <h1>
+                    Freshfood
+                </h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quas harum? Atque eius
+                    quaerat fuga sint molestiae illo corrupti vitae voluptatibus. Dicta rerum est delectus
+                    perspiciatis nemo nihil autem! Doloremque?</p>
+                <br>
+                <p>Email: example@mail.com</p>
+                <p>Phone: +00 123 456 789</p>
+                <p>Website: freshfood.com</p>
+            </div>
+            <div class="col-2 col-xs-12">
+                <h1>
+                    About us
+                </h1>
+                <br>
+                <p>
+                    <a href="#">
+                        Chefs
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Menu
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Testimonials
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        Lorem ipsum
+                    </a>
+                </p>
+            </div>
+            <div class="col-4 col-xs-12">
+                <h1>
+                    Subscribe & media
+                </h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aspernatur doloremque rerum nam
+                    ullam obcaecati error asperiores temporibus quo eum eaque sed odio vitae accusantium, dolorem
+                    nihil molestiae deserunt maxime!</p>
+                <div class="input-group">
+                    <input type="text" placeholder="Enter your email">
+                    <button>
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END FOOTER SECTION -->
+
+<script src="index.js"></script>
+<script src="carousel.js"></script>
+
+ <!-- Custom JavaScript -->
+ <script src="script.js"></script>
+ <script src="categoria.js"></script>
+ <script src="carrito.js"></script>
+ 
+     <!-- Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.1/bootstrap.bundle.min.js"></script>
+     <script src="scripts2.js"></script>
+     <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="javascrip.js"></script>
+ <!-- Bootstrap JS and Popper.js -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-pper2Qx3mY+i5aE6wVihLpvkEpw9HDG+Tf6S0J8b8vFi3Q+4V8H28L5XKjV+VVw" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-hLB1oEJcKs0C/1TTirQhOn9MdPCj4i8fiG5+Nr5fMI3Z+JY6p/EDiwNgDIst1gx" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-pper2Qx3mY+i5aE6wVihLpvkEpw9HDG+Tf6S0J8b8vFi3Q+4V8H28L5XKjV+VVw" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-hLB1oEJcKs0C/1TTirQhOn9MdPCj4i8fiG5+Nr5fMI3Z+JY6p/EDiwNgDIst1gx" crossorigin="anonymous">
+    </script>
+ <!-- JavaScript personalizado -->
+ <script>
+     function openModal() {
+         var myModal = new bootstrap.Modal(document.getElementById('productModal'), {
+             keyboard: true // Permite cerrar el modal con la tecla ESC
+         });
+         myModal.show();
+     }
+
+     // Función para restablecer las opciones de cremas seleccionadas
+function resetCreamSelection() {
+    const checkboxes = document.querySelectorAll('.form-check-input');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false; // Desmarcar todas las opciones de crema
+    });
+}
+
+// Agregar el evento para restablecer las cremas cuando se cierra el modal
+$('#productModal').on('hidden.bs.modal', function () {
+    resetCreamSelection(); // Llamar a la función cuando se oculta el modal
+});
+
+ </script>
+     <!-- Incluir EmailJS -->
+ 
+     
+     
+</body>
+
+
+</html>

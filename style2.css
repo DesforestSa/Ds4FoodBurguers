@@ -1,0 +1,1331 @@
+:root {
+    --primary-color: #cc0808;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+body,
+html {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--background-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrap {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    margin-left: 1rem;
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    color: var(--grey);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+.cart-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.cart-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 1rem;
+}
+
+.fullheight {
+    height: 100vh;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-img-fixed {
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 9rem 0;
+}
+
+.slogan {
+    text-align: left;
+}
+
+.slogan h1 {
+    font-size: 7rem;
+    color: var(--primary-color);
+}
+
+.slogan button {
+    padding: 1rem 5rem;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    color: var(--primary-color);
+    margin: 3rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+}
+
+.slogan button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+#about img {
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+
+.about-slogan {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.about-slogan.start {
+    transform: translateX(-10rem) !important;
+}
+
+.about-slogan h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--grey);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.food-menu {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.food-menu h1 {
+    color: var(--grey);
+}
+
+.food-menu p {
+    margin: 2rem 0;
+}
+
+.food-category {
+    display: flex;
+}
+
+.food-category button {
+    padding: .5rem 2.5rem;
+    margin: 0 1rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.food-category button:hover,
+.food-category button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.food-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
+
+.food-item {
+    width: 25%;
+    height: 30rem;
+    padding: 1rem;
+}
+
+.item-wrap {
+    height: 100%;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.item-wrap:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.item-img {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.img-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    border-radius: 2rem;
+}
+
+.img-holder:hover {
+    transform: scale(2) rotate(45deg);
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.item-info h3 {
+    color: var(--grey);
+}
+
+.item-info>div:first-child {
+    text-align: left;
+}
+
+.review-wrap {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-wrap.active {
+    transform: scale(1.2) !important;
+}
+
+.review-content {
+    padding: 3rem;
+    border-bottom: .125rem solid var(--grey);
+    position: relative;
+    text-align: center;
+}
+
+.review-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-info {
+    padding: 3rem;
+    text-align: center;
+}
+
+.rating {
+    margin-top: 2rem;
+}
+
+.rating i {
+    color: var(--primary-color);
+}
+
+.footer {
+    color: var(--white);
+}
+
+.footer h1 {
+    color: var(--primary-color);
+}
+
+.input-group {
+    padding: 1rem;
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.input-group input {
+    flex: auto;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.input-group button {
+    padding: .5rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: .5rem;
+    z-index: 99;
+    display: none;
+}
+
+.food-item-wrap>div {
+    display: none;
+}
+
+.food-item-wrap.all>div {
+    display: block;
+}
+
+.food-item-wrap.salad>div.salad-type {
+    display: block;
+}
+
+.food-item-wrap.lorem>div.lorem-type {
+    display: block;
+}
+
+.food-item-wrap.ipsum>div.ipsum-type {
+    display: block;
+}
+
+.food-item-wrap.dolor>div.dolor-type {
+    display: block;
+}
+
+/* ANIMATION */
+
+.left-to-right {
+    transform: translateX(-150%);
+    transition: 1s ease-in-out;
+}
+
+.left-to-right.start {
+    transform: translateX(0);
+}
+
+.right-to-left {
+    transform: translateX(150%);
+    transition: 1s ease-in-out;
+}
+
+.right-to-left.start {
+    transform: translateX(0);
+}
+
+.zoom {
+    transform: scale(0);
+    transition: .6s ease-in-out;
+}
+
+.zoom.start {
+    transform: unset;
+}
+
+.bottom-up {
+    transform: translateY(30%);
+    transition: .8s ease-in-out;
+}
+
+.bottom-up.start {
+    transform: translateY(0);
+}
+
+.delay-2 {
+    transition-delay: .2s;
+}
+
+.delay-4 {
+    transition-delay: .4s;
+}
+
+.delay-6 {
+    transition-delay: .6s;
+}
+
+.delay-8 {
+    transition-delay: .8s;
+}
+
+.delay-10 {
+    transition-delay: .10s;
+}
+
+.delay-12 {
+    transition-delay: .12s;
+}
+
+
+
+
+
+
+/* GRID SYSTEM */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.mb-nav {
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    * {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    span {
+        font-size: inherit;
+    }
+
+    .cart-btn i {
+        font-size: 2rem;
+    }
+
+    .about {
+        background-image: url(assets/dan-gold-4_jhDO54BYg-unsplash.jpg);
+        background-attachment: fixed;
+    }
+
+    .about-slogan.start {
+        transform: translateX(0) !important;
+    }
+
+    .food-menu {
+        padding: 4rem 0;
+    }
+
+    .food-item {
+        width: 50%;
+        height: 25rem;
+    }
+
+    .food-category {
+        overflow-y: scroll;
+    }
+
+    .food-category button {
+        width: max-content;
+    }
+
+    .back-to-top {
+        bottom: 6rem;
+        right: 1rem;
+    }
+
+    .review-wrap.active {
+        transform: unset !important;
+    }
+
+    /* MOBILE NAV */
+
+    .mb-nav {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--white);
+        z-index: 99;
+        overflow: hidden;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .mb-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 25%;
+        padding: 1rem 0;
+    }
+
+    .mb-nav-item i,
+    .mb-nav-item a {
+        font-size: 2rem;
+        color: var(--secon-color);
+        z-index: 2;
+        transition: .5s ease-in-out;
+    }
+
+    .mb-nav-item.active i {
+        color: var(--white);
+    }
+
+    .mb-move-item {
+        position: absolute;
+        left: 0;
+        width: 16.67%;
+        height: 100%;
+        background-color: var(--primary-color);
+        transition: .5s ease-in-out;
+    }
+
+    /* END MOBILE NAV */
+
+    .col-xs-1 {
+        width: 8.33%;
+    }
+
+    .col-xs-2 {
+        width: 16.66%;
+    }
+
+    .col-xs-3 {
+        width: 25%;
+    }
+
+    .col-xs-4 {
+        width: 33.33%;
+    }
+
+    .col-xs-5 {
+        width: 41.66%;
+    }
+
+    .col-xs-6 {
+        width: 50%;
+    }
+
+    .col-xs-7 {
+        width: 58.33%;
+    }
+
+    .col-xs-8 {
+        width: 66.66%;
+    }
+
+    .col-xs-9 {
+        width: 75%;
+    }
+
+    .col-xs-10 {
+        width: 83.33%;
+    }
+
+    .col-xs-11 {
+        width: 91.66%;
+    }
+
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    .h-xs {
+        display: none;
+    }
+}
+
+
+
+--Contactenos
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-container .info, .contact-container .form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.contact-container .logo {
+    width: 170px;
+    height: auto;
+}
+
+.contact-container .contact-details {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-container .contact-details li {
+    margin-bottom: 10px;
+}
+
+.contact-container .contact-details a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-container .form h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contact-container .form input, 
+.contact-container .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-container .form textarea {
+    height: 150px;
+}
+
+.contact-container .form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-container .form button:hover {
+    background-color: #ff4500;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .contact-container .info, .contact-container .form {
+        width: 48%;
+    }
+}
+
+
+
+
+
+
+
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta según sea necesario */
+    margin: auto;
+    overflow: hidden; /* Oculta las imágenes fuera de los límites */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    
+    right: 10px;
+}
+
+
+
+/*barra de navegacion*/
+.nav {
+    background-color: #000000; /* Ajusta el color del fondo de la barra de navegación */
+    padding: 10px 0; /* Espaciado en la parte superior e inferior */
+}
+
+.menu-wrap {
+    display: flex; /* Alinea los elementos dentro de la barra de navegación en una fila */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+}
+
+.navbar-nav {
+    display: flex; /* Hace que los elementos dentro de 'navbar-nav' estén en una fila */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.nav-item {
+    margin: 0 30px; /* Aumenta el espaciado horizontal entre los elementos de navegación */
+}
+
+.nav-link {
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+    color: #000000; /* Color blanco para los enlaces */
+    font-weight: bold; /* Hace el texto más grueso */
+    transition: color 0.3s ease; /* Suaviza la transición del cambio de color */
+}
+
+.nav-link:hover {
+    color: #000000; /* Color al pasar el ratón (puedes cambiar este color) */
+}
+
+.logo {
+    font-size: 24px; /* Tamaño de la fuente del logo */
+    font-weight: bold; /* Hace el logo más visible */
+    color: #000000;
+}
+
+.bx {
+    font-size: 24px; /* Tamaño del ícono */
+    color: #ffffff; /* Color del ícono */
+}
+
+
+.payment-option {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.payment-option:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.payment-icon {
+    font-size: 48px;
+    color: #007bff;
+}
+
+.qr-code-container img.qr-image {
+    max-width: 200px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.payment-section {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.payment-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.payment-section ul li {
+    margin-bottom: 10px;
+}
+
+.payment-section h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/*alerta*/
+
+/* Estilos del botón */
+.btn-add-to-cart {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #555;
+}
+
+
+
+
+/* Estilos de la alerta */
+.custom-alert {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.75); /* Fondo mate con transparencia */
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.5s ease; /* Efecto de fade in y out */
+    opacity: 0;
+}
+
+/* Mostrar la alerta */
+.custom-alert.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Icono de alerta */
+.alert-icon {
+    font-size: 24px;
+    color: #0ea301; /* Color amarillo */
+}
+
+/*categoria   */
+.food-item {
+    display: none; /* Ocultar todos los productos por defecto */
+}
+
+button.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos de alerta */
+.custom-alert {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.custom-alert.show {
+    display: block;
+}
+
+
+
+.food-item {
+    display: none; /* Ocultar todos los productos por defecto */
+}
+
+button.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos de alerta */
+.custom-alert {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.custom-alert.show {
+    display: block;
+}
+
+/*------------------------------------*/
+.custom-alert {
+    display: none; /* Inicialmente oculta */
+    position: absolute; /* Colocarla dentro del contenedor */
+    top: 10px; /* Posición superior dentro de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo mate con transparencia */
+    color: white;
+    padding: 5px 10px; /* Reducir el espacio interno */
+    border-radius: 5px; /* Reducir el borde redondeado */
+    z-index: 1000;
+    font-size: 12px; /* Reducir el tamaño de fuente */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reducir sombra */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translate(-50%, 10px); /* Ajuste para que suba menos */
+    min-width: 100px; /* Establecer un ancho mínimo para que no se achique demasiado */
+    text-align: center; /* Centrar el texto */
+}
+
+.custom-alert.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, 0); /* Aparece suavemente */
+}
+
+.custom-alert .alert-icon {
+    margin-right: 5px; /* Reducir el margen del icono */
+}
+
+.custom-alert .alert-icon i {
+    font-size: 16px; /* Reducir el tamaño del icono */
+    color: #28a745; /* Icono de color verde */
+}
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+.item-wrap {
+    position: relative;
+}
+
+.custom-alert {
+    display: none; /* Inicialmente oculta */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo mate con transparencia */
+    color: white;
+    padding: 8px 12px; /* Reducir el espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000;
+    font-size: 14px; /* Reducir el tamaño de fuente */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translate(-50%, 10px); /* Efecto de subida */
+    max-width: 100px; /* Limitar el ancho máximo */
+    height: auto; /* Ajustar la altura automáticamente */
+    text-align: center; /* Centrar el texto */
+    overflow: hidden; /* Evitar que el contenido se desborde */
+}
+
+.custom-alert.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, 0); /* Aparece suavemente */
+}
+
+.custom-alert .alert-icon {
+    margin-right: 5px; /* Reducir el margen del icono */
+}
+
+.custom-alert .alert-icon i {
+    font-size: 16px; /* Reducir el tamaño del icono */
+    color: #28a745; /* Icono de color verde */
+}
+
+
+/*----------------------MODAL DE PRODUCTOS-----------------------------------*/
+/* Modal */
+.modal-content {
+    background: rgba(255, 255, 255, 0.9); /* Efecto mate */
+    
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde suave */
+}
+
+/* Encabezado del modal */
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón de cierre del modal */
+.btn-close {
+    background-color: black;
+    opacity: 1; /* Asegura que el botón sea completamente visible */
+}
+
+.btn-close::before {
+    content: '×';
+    color: white; /* O negro si quieres el icono en negro */
+    font-size: 1.5rem; /* Ajusta el tamaño si lo necesitas */
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    max-width: 300px; /* Puedes ajustar el tamaño máximo */
+    text-align: center; /* Centra el texto dentro del botón */
+    border-radius: 10px; /* Ajuste de la forma del botón si lo prefieres */
+}
+
+
+/* Estilo del cuerpo del modal */
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+/* Carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Iconos en color blanco */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #333; /* Color de los indicadores del carrusel */
+}
+
+/* Título y descripción del producto */
+#modalProductDescription {
+    color: #555;
+}
+
+#modalProductPrice {
+    font-size: 1.5rem;
+    color: #28a745; /* Precio en color verde */
+}
+
+/* Select de tallas */
+.size p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.size select {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Radio buttons */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-check-input {
+    margin-right: 10px;
+    accent-color: #27a858; /* Cambia el color de los radio buttons */
+}
+
+.form-check-label {
+    color: #333;
+}
+
+/* Botones de compra */
+.btn-primary {
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.btn-primary.btn-whatsapp {
+    background-color: #27a858;
+}
+
+.btn-primary.btn-facebook {
+    background-color: #273fa8;
+}
+
+.btn-primary.btn-instagram {
+    background-color: #a965c4;
+}
+
+.btn-primary.btn-sm {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* Footer del modal */
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+/* Ajustes generales */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h5 {
+    font-weight: bold;
+    color: #333;
+}
+/*____________categorias buton ___________________________*/
+
+/* Estilos para los botones de categoría */
+
+/* Estilo general de los botones */
+.food-category button {
+    background-color: #f7c529; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para botones activos */
+.food-category button.active {
+    background-color: #ff5733; /* Color de fondo del botón activo */
+}
+
+/* Efecto hover */
+.food-category button:hover {
+    background-color: #ff8f00; /* Color al pasar el ratón */
+    transform: translateY(-5px); /* Animación de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto al hacer clic */
+.food-category button:active {
+    background-color: #ff5733; /* Color al hacer clic */
+    transform: translateY(0);
+}
+
+/* Específico para cada categoría con diferente color */
+.food-category button[data-food-type="hamburguesa"] {
+    background-color: #ca9c06; /* Color único para Hamburguesa */
+}
+
+.food-category button[data-food-type="papita"] {
+    background-color: #ffbf00; /* Color único para Papita */
+}
+
+.food-category button[data-food-type="gaseosa"] {
+    background-color: #8a0606; /* Color único para Gaseosa */
+}
+
+.food-category button[data-food-type="perritos"] {
+    background-color: #bd9797da; /* Color único para Perritos Calientes */
+}
+
+.food-category button[data-food-type="broastar"] {
+    background-color: #be5b34; /* Color único para Broaster */
+}
+
+.food-category button[data-food-type="pollo"] {
+    background-color: #a16d1ed8; /* Color único para Salchi Papas */
+}
